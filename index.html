@@ -6,10 +6,55 @@
 </head>
 <!-- Author: Piotr Rajchel -->
 <body>
-	<header>
-		<h1>Volunteer Form</h1>
-	</header>
-	
-	
+	<form method="POST" autocomplete="on" action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" >
+		<header>
+			<h1>Volunteer Form</h1>
+		</header>
+		
+		<fieldset margin-right="50px">
+			<legend>My Info</legend>
+			<label>First Name:<input type="text" name="first_name_field"></label><br>
+			<br>
+			<label>Last Name:<input type="text" name="last_name_field"></label><br>
+			<br>
+			<label>Phone Number:<input type="text" name="phone_field"></label><br>
+			<br>
+			<label>Email:<input type="text" name="email_field"></label><br>
+			<br>
+			<label>Gender:</label>
+			<label>Male<input type="radio" name="gender_field" value="Male"></label>
+			<label>Female<input type="radio" name="gender_field" value="Female"></label><br>
+			<br>
+			<label>Age:</label>
+			<select name="age_field">
+				<option value="under18">under 18</option>
+				<option value="18-24">18-24</option>
+				<option value="25-34">25-34</option>
+				<option value="45-54">45-54</option>
+				<option value="55-64">55-64</option>
+				<option value="65+">65 and over</option>
+			</select>
+		</fieldset>
+
+		<fieldset>
+			<legend>Days Available:</legend>
+			<label>Sunday<input type="checkbox" name="available_field[]" value="Sunday"><br>
+			<label>Monday<input type="checkbox" name="available_field[]" value="Monday"><br>
+			<label>Tuesday<input type="checkbox" name="available_field[]" value="Tuesday"><br>
+			<label>Wednesday<input type="checkbox" name="available_field[]" value="Wednesday"><br>
+			<label>Thursday<input type="checkbox" name="available_field[]" value="Thursday"><br>
+			<label>Friday<input type="checkbox" name="available_field[]" value="Friday"><br>
+			<label>Saturday<input type="checkbox" name="available_field[]" value="Saturday"><br>
+			<br>
+			<label for="our_textarea">Any Comments?</label><br>
+			<textarea cols="30" rows="5" name="comments_field"></textarea>
+		</fieldset>
+		
+		<div>
+			<input type="submit" value="Send Me">
+			<input type="hidden" name="hidden_field" value="Piotr Rajchel">
+		</div>
+		
+	</form>
 </body>
 </html>
